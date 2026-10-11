@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kim Nhung xinh đẹp🌙</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+
+html,
+body{
+    margin:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:'Baloo 2',cursive;
+    background:#0b1126;
+}
+
+#sky{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    background:
+    linear-gradient(to bottom,
+    #050b22 0%,
+    #16265d 45%,
+    #28397a 100%);
+}
+
+/* ---------- Moon ---------- */
+
+.moon{
+    position:absolute;
+    top:70px;
+    right:90px;
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    background:#fff8d5;
+    box-shadow:
+    0 0 40px #fff6aa,
+    0 0 80px #fff7a6,
+    0 0 150px rgba(255,255,210,.5);
+
+    animation:moonFloat 6s ease-in-out infinite;
+}
+
+.moon::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:145px;
+    height:145px;
+
+    background:#16265d;
+
+    border-radius:50%;
+
+    top:8px;
+    right:-8px;
+}
+
+@keyframes moonFloat{
+
+0%,100%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+}
+
+/* ---------- Stars ---------- */
+
+.star{
+
+position:absolute;
+
+border-radius:50%;
+
+background:white;
+
+animation:twinkle infinite;
+}
+
+@keyframes twinkle{
+
+0%,100%{
+opacity:.2;
+transform:scale(.7);
+}
+
+50%{
+opacity:1;
+transform:scale(1.4);
+}
+
+}
+
+/* ---------- Shooting Star ---------- */
+
+.shooting{
+
+position:absolute;
+
+width:180px;
+height:2px;
+
+background:
+linear-gradient(90deg,white,transparent);
+
+transform:rotate(-35deg);
+
+opacity:.7;
+
+animation:shoot 10s linear infinite;
+
+}
+
+@keyframes shoot{
+
+0%{
+transform:translate(-200px,-200px) rotate(-35deg);
+opacity:0;
+}
+
+8%{
+opacity:1;
+}
+
+20%{
+transform:translate(1200px,700px) rotate(-35deg);
+opacity:0;
+}
+
+100%{
+opacity:0;
+}
+
+}
+
+/* ---------- Clouds ---------- */
+
+.cloud{
+
+position:absolute;
+
+font-size:70px;
+
+opacity:.75;
+
+animation:cloud linear infinite;
+
+}
+
+@keyframes cloud{
+
+from{
+
+transform:translateX(-250px);
+
+}
+
+to{
+
+transform:translateX(calc(100vw + 300px));
+
+}
+
+}
+
+/* ---------- Fireflies ---------- */
+
+.firefly{
+
+position:absolute;
+
+width:6px;
+
+height:6px;
+
+background:#ffe55b;
+
+border-radius:50%;
+
+box-shadow:0 0 15px #ffe55b;
+
+animation:firefly 8s ease-in-out infinite;
+
+}
+
+@keyframes firefly{
+
+0%,100%{
+
+transform:translate(0,0);
+
+opacity:.2;
+
+}
+
+25%{
+
+transform:translate(20px,-40px);
+
+opacity:1;
+
+}
+
+50%{
+
+transform:translate(-20px,30px);
+
+}
+
+75%{
+
+transform:translate(40px,-20px);
+
+}
+
+}
+
+/* ---------- Card ---------- */
+
+.card{
+
+backdrop-filter:blur(18px);
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.18);
+
+box-shadow:0 15px 60px rgba(0,0,0,.45);
+
+}
+
+/* ---------- Title ---------- */
+
+.title{
+
+font-weight:800;
+
+font-size:46px;
+
+line-height:1.15;
+
+letter-spacing:1px;
+
+background:linear-gradient(
+90deg,
+#fff,
+#ffe58e,
+#ffd1ef,
+#d6c4ff,
+#fff);
+
+background-size:300%;
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+animation:titleMove 8s linear infinite;
+
+}
+
+@keyframes titleMove{
+
+from{
+background-position:0%;
+}
+
+to{
+background-position:300%;
+}
+
+}
+
+.bounce{
+
+animation:bounce 2s infinite;
+
+}
+
+@keyframes bounce{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+}
+
+.btn{
+
+transition:.35s;
+
+}
+
+.btn:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 30px #ec4899;
+
+}
+
+/* ---------- Ground ---------- */
+
+.ground{
+
+position:absolute;
+
+bottom:-40px;
+
+left:0;
+
+width:100%;
+
+height:180px;
+
+background:#1e293b;
+
+border-radius:100% 100% 0 0;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="sky">
+
+<div class="moon"></div>
+
+<div class="shooting" style="top:120px;left:-200px;"></div>
+
+<div class="cloud" style="top:130px;animation-duration:45s;">☁️</div>
+<div class="cloud" style="top:260px;font-size:55px;animation-duration:60s;animation-delay:-15s;">☁️</div>
+<div class="cloud" style="top:380px;font-size:45px;animation-duration:52s;animation-delay:-28s;">☁️</div>
+
+<div class="ground"></div>
+
+<div class="relative flex h-screen items-center justify-center z-10 px-6">
+
+<div class="card rounded-[32px] p-8 text-center max-w-xl w-full">
+
+<div class="text-6xl bounce">
+🌙
+</div>
+
+<h1 class="title mt-3">
+
+Chúc
+<br>
+
+Kim Nhung
+<br>
+
+ngủ ngon ✨
+
+</h1>
+
+<p class="mt-4 text-slate-200 text-base leading-7">
+
+Chúc em có một đêm thật bình yên.
+<br>
+
+Ngủ thật ngon, mơ thật đẹp.
+<br>
+
+Và thức dậy với thật nhiều năng lượng nha.
+
+</p>
+
+<div class="flex justify-center gap-4 text-3xl mt-5">
+
+<div class="bounce">🧸</div>
+
+<div class="bounce" style="animation-delay:.2s">⭐</div>
+
+<div class="bounce" style="animation-delay:.4s">🐑</div>
+
+<div class="bounce" style="animation-delay:.6s">💤</div>
+
+<div class="bounce" style="animation-delay:.8s">🌸</div>
+
+</div>
+
+<button
+id="secretBtn"
+onclick="document.getElementById('secretBtn').textContent='Mỗi ngày đều vui hơn một chút nghe 🌷';"
+class="btn mt-6 rounded-full px-7 py-3 text-white text-base font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">
+
+Đừng nhấn vào đây
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+/* Stars */
+
+for(let i=0;i<180;i++){
+
+const s=document.createElement("div");
+
+s.className="star";
+
+const size=Math.random()*3+1;
+
+s.style.width=size+"px";
+
+s.style.height=size+"px";
+
+s.style.left=Math.random()*100+"vw";
+
+s.style.top=Math.random()*100+"vh";
+
+s.style.animationDuration=(Math.random()*3+2)+"s";
+
+s.style.animationDelay=(Math.random()*4)+"s";
+
+document.getElementById("sky").appendChild(s);
+
+}
+
+/* Fireflies */
+
+for(let i=0;i<22;i++){
+
+const f=document.createElement("div");
+
+f.className="firefly";
+
+f.style.left=Math.random()*100+"vw";
+
+f.style.top=(Math.random()*45+40)+"vh";
+
+f.style.animationDuration=(Math.random()*6+6)+"s";
+
+f.style.animationDelay=Math.random()*5+"s";
+
+document.getElementById("sky").appendChild(f);
+
+}
+
+/* Shooting stars */
+
+setInterval(()=>{
+
+const star=document.createElement("div");
+
+star.className="shooting";
+
+star.style.top=Math.random()*250+"px";
+
+star.style.left="-200px";
+
+document.getElementById("sky").appendChild(star);
+
+setTimeout(()=>star.remove(),10000);
+
+},4500);
+
+</script>
+
+</body>
+</html>
